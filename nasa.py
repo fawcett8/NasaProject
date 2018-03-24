@@ -1,3 +1,12 @@
+
+from  flask import Flask, render_template
+
+app = Flask("Nasa")
+
+@app.route("/")
+def nasa():
+	return render_template('nasa.html', name=name):
+
 import requests
 search_date = "2018-03-18"
 endpoint = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=Ey6IJ2zvbnEYKNfiKskFVkxFLmRmGrEaAhRNpLAM"
@@ -11,3 +20,4 @@ if any_photos:
 else:
 	result = "No photos for {0}".format(search_date)
 print result
+app.run(debug=True)
