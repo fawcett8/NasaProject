@@ -45,12 +45,21 @@
 </div>
 </div>
 
+{% if img_src %}
 <div class="container">
+  <img src="{{img_src}}">
+</div>
+{% endif %}
+{% if not img_src %}
+<div class="container">
+  <p>No image found for that date</p>
   <form method="POST">
     <input name="date" placeholder="YYYY-MM-DD">
     <input type="submit">
   </form>
 </div>
+{% endif %}
+
 
 <div class="container">
     <div class="row">
