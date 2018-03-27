@@ -1,10 +1,9 @@
 
 from  flask import Flask, render_template, request
 
-app = Flask("Nasa")
+app = Flask(__name__)
 
 def get_img(search_date):
-	import requests
 	endpoint = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=Ey6IJ2zvbnEYKNfiKskFVkxFLmRmGrEaAhRNpLAM"
 	payload = {"earth_date" : search_date, "camera" : "FHAZ"}
 	response = requests.get(endpoint, params=payload)
