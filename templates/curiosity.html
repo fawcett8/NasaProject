@@ -13,7 +13,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href='{{ url_for('static',filename='css/main.css')}}' rel='stylesheet'>
 </head>
-<<body>
+<body>
 
 <div class="container">
        <header class="site-header">
@@ -41,7 +41,7 @@
   </header>
 
 <div class="container">
-  <h1> What's on Mars today? </h1>
+  <h1> Life on Mars </h1>
 </div>
 </div>
 
@@ -50,9 +50,10 @@
   <img src="{{img_src}}">
 </div>
 {% endif %}
+
 {% if not img_src %}
+<p>No image found for that date</p>
 <div class="container">
-  <p>No image found for that date</p>
   <form method="POST">
     <input name="date" placeholder="YYYY-MM-DD">
     <input type="submit">
@@ -60,15 +61,17 @@
 </div>
 {% endif %}
 
+<div class="container">
+  <form method="POST">
+    <input name="date" placeholder="YYYY-MM-DD">
+    <input type="submit">
+  </form>
+</div>
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-6">
-          <p> insert some stuff </p>
-          </div>
-
           <div class="col-sm-6">
-            <p> insert some stuff </p>
+            <h2> There haven't always been cameras on Mars..if you're not getting any pictures through we suggest you try another date! </h2>
           </div>
         </div>
 

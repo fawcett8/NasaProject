@@ -15,7 +15,7 @@ def get_img(search_date):
 	if any_photos:
 		return any_photos[0]["img_src"]
 	else:
-		return None
+		return "no data"
 
 
 @app.route("/")

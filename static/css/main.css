@@ -4,5 +4,13 @@ body {
 
 h1 {
     color: white;
+    font-family: "Georgia", Georgia, serif;
+    font-size: 20px;
 }
 
+h2 {
+	color: pink;
+	font-family: "Georgia", Georgia, serif;
+	font-style: bold;
+	font-size: 14px;
+}
