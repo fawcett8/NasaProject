@@ -1,1 +1,1 @@
-web: gunicorn nasa.wsgi
+web: gunicorn app:app --log-file=-
